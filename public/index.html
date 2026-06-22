@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="description" content="DSP Analysis Suite - A hobbyist DSP toolbox by Prashanna Paudyal">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pulsify | DSP Toolbox</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="dashboard">
+        <header>
+            <h1>PULSIFY</h1>
+            <div class="controls-top">
+                <button id="powerBtn" class="toggle off">POWER: OFF</button>
+                <button id="audioBtn" class="toggle off" disabled>AUDIO: MUTED</button>
+            </div>
+        </header>
+        
+        <main>
+            <div class="oscilloscope-container">
+                <canvas id="oscilloscope" width="800" height="300"></canvas>
+            </div>
+
+            <div class="control-panel">
+                <div class="signal-box">
+                    <h3>Signal 1 (Carrier)</h3>
+                    <select id="sig1Type">
+                        <option value="sine">Sine</option>
+                        <option value="cosine">Cosine</option>
+                        <option value="square">Square</option>
+                        <option value="triangle">Triangle</option>
+                        <option value="sawtooth">Sawtooth</option>
+                    </select>
+                    <label>Freq (Hz): <input type="number" id="sig1Freq" value="440" min="1"></label>
+                </div>
+
+                <div class="signal-box">
+                    <h3>Operation</h3>
+                    <select id="operation">
+                        <option value="none">None (View Sig 1)</option>
+                        <option value="add">Add</option>
+                        <option value="inverse">Inverse (Sig 1)</option>
+                        <option value="am">Amplitude Mod (AM)</option>
+                        <option value="fm">Frequency Mod (FM)</option>
+                    </select>
+                    <button id="processBtn" disabled>SYNC TO CLOUD</button>
+                </div>
+
+                <div class="signal-box">
+                    <h3>Signal 2 (Modulator)</h3>
+                    <select id="sig2Type">
+                        <option value="sine">Sine</option>
+                        <option value="cosine">Cosine</option>
+                        <option value="square">Square</option>
+                        <option value="triangle">Triangle</option>
+                        <option value="sawtooth">Sawtooth</option>
+                    </select>
+                    <label>Freq (Hz): <input type="number" id="sig2Freq" value="5" min="1"></label>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>

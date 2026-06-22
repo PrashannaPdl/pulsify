@@ -11,7 +11,7 @@ const audioBtn = document.getElementById('audioBtn');
 const processBtn = document.getElementById('processBtn');
 
 
-const NEON_GREEN = '#39ff14';
+const NEON_GREEN = '#E7FE00';
 const NEON_BLUE = '#55CFCF';
 
 function drawFlatline() {

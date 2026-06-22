@@ -1,0 +1,116 @@
+@import url('https://cdn.jsdelivr.net/npm/et-book@1.0.0/et-book.css');
+
+* { 
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #0b0f0f; 
+    color: #DCF5F5; 
+    font-family: 'et-book', serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.dashboard {
+    background-color: #111a1a;
+    padding: 2rem;
+    border-radius: 4px;
+    border: 1px solid #55CFCF;
+    box-shadow: 0 0 20px rgba(85, 207, 207, 0.1);
+    width: 95%;
+    max-width: 900px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    border-bottom: 1px solid rgba(85, 207, 207, 0.3);
+    padding-bottom: 1rem;
+}
+
+h1 { 
+    color: #55CFCF;
+    font-weight: normal;
+    letter-spacing: 2px;
+}
+
+.oscilloscope-container {
+    background-color: #050808;
+    border: 2px solid #55CFCF;
+    border-radius: 4px;
+    box-shadow: 0 0 15px rgba(85, 207, 207, 0.4), inset 0 0 20px rgba(85, 207, 207, 0.15);
+    margin-bottom: 2rem;
+    overflow: hidden;
+}
+
+canvas { 
+    width: 100%;
+    height: 300px;
+    display: block;
+}
+
+.control-panel { 
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.signal-box {
+    flex: 1;
+    background-color: rgba(85, 207, 207, 0.05);
+    padding: 1rem;
+    border: 1px solid rgba(85, 207, 207, 0.3);
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+h3 { 
+    color: #55CFCF;
+    font-size: 1.1rem;
+    font-weight: normal;
+}
+
+select, input {
+    background-color: #0b0f0f;
+    color: #DCF5F5;
+    border: 1px solid #55CFCF;
+    padding: 0.5rem;
+    font-family: 'et-book', serif;
+}
+
+button {
+    background-color: #0b0f0f;
+    color: #55CFCF;
+    border: 1px solid #55CFCF;
+    padding: 0.8rem;
+    font-family: 'et-book', serif;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: all 0.3s;
+}
+
+button:hover:not([disabled]) {
+    background-color: #55CFCF;
+    color: #0b0f0f;
+}
+button[disabled] { 
+    opacity: 0.4;
+    cursor: not-allowed;
+    border-color: gray;
+    color: gray;
+}
+
+.toggle.on { 
+    background-color: #55CFCF;
+    color: #0b0f0f;
+    font-weight: bold;
+}
